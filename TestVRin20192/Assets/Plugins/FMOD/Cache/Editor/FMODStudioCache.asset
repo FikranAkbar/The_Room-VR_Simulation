@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637426808550117540
+  lastModified: 637426968238209387
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637426808550177530
+  lastModified: 637426968238299426
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -100,7 +100,7 @@ MonoBehaviour:
   - {fileID: -8574028834752926512}
   StringsBanks:
   - {fileID: -2824746517066833280}
-  stringsBankWriteTime: 637426808550177530
+  stringsBankWriteTime: 637426968238299426
   cacheVersion: 5
 --- !u!114 &2564903018197893236
 MonoBehaviour:
