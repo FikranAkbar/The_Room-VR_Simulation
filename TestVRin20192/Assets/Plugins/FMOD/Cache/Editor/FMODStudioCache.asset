@@ -14,10 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637426968238209387
+  lastModified: 637427882101096433
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8281124446385775387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Suara Pintu
+  m_EditorClassIdentifier: 
+  Path: event:/Suara Pintu
+  guid: f882168bf9d3de458d1b46d5b944ae58
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 333368
 --- !u!114 &-6964973984980246748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,11 +75,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637426968238299426
+  lastModified: 637427882101426664
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 742
+    Value: 796
   Exists: 1
 --- !u!114 &-1141392310867231659
 MonoBehaviour:
@@ -95,12 +118,13 @@ MonoBehaviour:
   - {fileID: -8574028834752926512}
   EditorEvents:
   - {fileID: 7337126677288891207}
+  - {fileID: -8281124446385775387}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8574028834752926512}
   StringsBanks:
   - {fileID: -2824746517066833280}
-  stringsBankWriteTime: 637426968238299426
+  stringsBankWriteTime: 637427882101426664
   cacheVersion: 5
 --- !u!114 &2564903018197893236
 MonoBehaviour:
