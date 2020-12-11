@@ -10208,6 +10208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 538982031}
   - component: {fileID: 538982032}
+  - component: {fileID: 538982033}
   m_Layer: 0
   m_Name: LeftHandRig
   m_TagString: Untagged
@@ -10244,6 +10245,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Weight: 1
   m_Effectors: []
+--- !u!95 &538982033
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538982030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ea542db29064ac4da228a7bc3eec8ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &590263375
 GameObject:
   m_ObjectHideFlags: 0
@@ -12369,6 +12389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 960932780}
   - component: {fileID: 960932781}
+  - component: {fileID: 960932782}
   m_Layer: 0
   m_Name: RightHandRig
   m_TagString: Untagged
@@ -12405,6 +12426,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Weight: 1
   m_Effectors: []
+--- !u!95 &960932782
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960932779}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d71a063c11e01d4e8caa28fac485fd3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &989139289
 GameObject:
   m_ObjectHideFlags: 0
@@ -14105,7 +14145,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1975203386}
-  - component: {fileID: 1975203387}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -14127,25 +14166,6 @@ Transform:
   m_Father: {fileID: 424713913}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1975203387
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975203385}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9ea542db29064ac4da228a7bc3eec8ca, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1992196406
 GameObject:
   m_ObjectHideFlags: 0
