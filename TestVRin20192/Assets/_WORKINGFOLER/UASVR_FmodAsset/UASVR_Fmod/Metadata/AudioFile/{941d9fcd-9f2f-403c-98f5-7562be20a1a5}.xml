@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{941d9fcd-9f2f-403c-98f5-7562be20a1a5}">
+		<property name="assetPath">
+			<value>274809__barkerspinhead__open-and-close-window.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>20.883945578231291</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{55a3f870-ef85-4181-a5ce-04b4c9db2b59}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{ed4ed5a1-6eeb-4995-8677-7d1d3557b56a}">
+		<property name="assetPath">
+			<value>Table Sound Effects.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>60.107755102040819</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{55a3f870-ef85-4181-a5ce-04b4c9db2b59}</destination>
+		</relationship>
+	</object>
+</objects>

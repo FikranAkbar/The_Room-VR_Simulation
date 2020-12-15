@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f960a77e-3adb-4ab1-8122-c1e8c9e0b221}">
+		<property name="assetPath">
+			<value>194365__macif__door-knocking-angry.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.1160770975056691</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{55a3f870-ef85-4181-a5ce-04b4c9db2b59}</destination>
+		</relationship>
+	</object>
+</objects>
