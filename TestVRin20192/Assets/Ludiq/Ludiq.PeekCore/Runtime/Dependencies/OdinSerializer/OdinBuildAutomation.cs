@@ -76,7 +76,7 @@ namespace Ludiq.OdinSerializer.Utilities.Editor
                     List<Type> types;
                     if (AOTSupportUtilities.ScanProjectForSerializedTypes(out types))
                     {
-                        AOTSupportUtilities.GenerateDLL(GenerateAssembliesDir, "OdinAOTSupport", types);
+                        AOTSupportUtilities.GenerateDLL(GenerateAssembliesDir, "Ludiq.OdinAOTSupport", types);
                     }
                 }
             }

@@ -115,10 +115,14 @@ namespace Ludiq.Peek
 											parent = parent.parent;
 										}
 									}
+									else if (parenting == CreatorParenting.Child)
+									{
+										parent = _hit.Value.transform;
+									}
 
 									if (parent != null)
 									{
-										SceneManager.MoveGameObjectToScene(instance, parent.gameObject.scene);
+										Undo.MoveGameObjectToScene(instance, parent.gameObject.scene, "Creator");
 									}
 
 									instance.transform.SetParent(parent, true);

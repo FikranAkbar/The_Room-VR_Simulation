@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Ludiq.Peek
 {
@@ -139,6 +141,25 @@ namespace Ludiq.Peek
 			}
 
 			return shallowestTarget;
+		}
+
+		public static Scene? FindCommonScene(Transform[] targets)
+		{
+			Scene? scene = null;
+
+			foreach (var target in targets)
+			{
+				if (scene == null)
+				{
+					scene = target.gameObject.scene;
+				}
+				else if (scene != target.gameObject.scene)
+				{
+					return null;
+				}
+			}
+
+			return scene;
 		}
 
 		private static void CacheChildrenTransforms(Transform target, out Vector3[] globalPositions, out Quaternion[] globalRotations, out Vector3[] globalScales)

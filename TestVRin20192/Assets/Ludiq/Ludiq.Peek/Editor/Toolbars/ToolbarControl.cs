@@ -32,13 +32,29 @@ namespace Ludiq.Peek
 		}
 
 		public ToolbarWindow window { get; private set; }
+		
+		private Rect _screenPosition;
 
-		public Rect screenPosition { get; set; }
+		private Rect _guiPosition;
+
+		public Rect screenPosition
+		{
+			get => _screenPosition;
+			set
+			{
+				_screenPosition = value;
+				_guiPosition = GUIUtility.ScreenToGUIRect(screenPosition);
+			}
+		}
 
 		public Rect guiPosition
 		{
-			get => GUIUtility.ScreenToGUIRect(screenPosition);
-			set => screenPosition = LudiqGUIUtility.GUIToScreenRect(value);
+			get => _guiPosition;
+			set
+			{
+				_guiPosition = value;
+				_screenPosition = LudiqGUIUtility.GUIToScreenRect(screenPosition);
+			}
 		}
 
 		public bool isDraggable { get; set; }
@@ -426,15 +442,24 @@ namespace Ludiq.Peek
 
 		public void DrawInSceneView()
 		{
-			GUILayout.BeginArea(guiPosition);
-			GUILayout.BeginHorizontal();
+			var x = guiPosition.x;
 
 			if (isDraggable)
 			{
 				var handleStyle = PeekStyles.SceneViewTool(true, toolbar.Count == 0);
 				var handleContent = LudiqGUIUtility.TempContent(PeekPlugin.Icons.toolbarDragHandle?[IconSize.Small]);
-				var handlePosition = GUILayoutUtility.GetRect(handleContent, handleStyle);
 				var handleControlId = GUIUtility.GetControlID(FocusType.Passive);
+				var handleSize = handleStyle.CalcSize(handleContent);
+
+				var handlePosition = new Rect
+				(
+					x,
+					guiPosition.y,
+					handleSize.x,
+					handleSize.y
+				);
+
+				x = handlePosition.xMax;
 
 				EditorGUIUtility.AddCursorRect(handlePosition, MouseCursor.MoveArrow, handleControlId);
 
@@ -508,6 +533,20 @@ namespace Ludiq.Peek
 
 				var isFirst = i == 0;
 				var isLast = i == toolbar.Count - 1;
+				var size = toolControl.GetSceneViewSize(isFirst, isLast);
+
+				if (e.type == EventType.Repaint)
+				{
+					toolControl.guiPosition = new Rect
+					(
+						x,
+						guiPosition.y,
+						size.x,
+						size.y
+					);
+				}
+
+				x = toolControl.guiPosition.xMax;
 
 				var delayedTooltip = toolControl.DrawInSceneView(isFirst && !isDraggable, isLast);
 
@@ -516,9 +555,6 @@ namespace Ludiq.Peek
 					delayedTooltips.Add(delayedTooltip.Value);
 				}
 			}
-
-			GUILayout.EndHorizontal();
-			GUILayout.EndArea();
 
 			foreach (var delayedTooltip in delayedTooltips)
 			{

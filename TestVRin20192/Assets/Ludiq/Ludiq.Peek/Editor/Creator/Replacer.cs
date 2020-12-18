@@ -42,9 +42,11 @@ namespace Ludiq.Peek
 						var scale = target.transform.localScale;
 						var parent = target.transform.parent;
 						var siblingIndex = target.transform.GetSiblingIndex();
+						var scene = target.scene;
 
 						Undo.DestroyObjectImmediate(target);
 						var replacement = DuplicateGameObject(template);
+						Undo.MoveGameObjectToScene(replacement, scene, "Move Replacement To Scene");
 
 						replacement.transform.position = position;
 						replacement.transform.rotation = rotation;
@@ -86,7 +88,7 @@ namespace Ludiq.Peek
 			{
 				result = (GameObject)UnityObject.Instantiate(original);
 				result.name = original.name;
-				SceneManager.MoveGameObjectToScene(result, original.scene);
+				Undo.MoveGameObjectToScene(result, original.scene, "Duplicate " + result.name);
 			}
 
 			Undo.RegisterCreatedObjectUndo(result, "Duplicate " + result.name);

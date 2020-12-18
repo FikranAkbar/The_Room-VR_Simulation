@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Ludiq.Peek;
 using Ludiq.PeekCore;
@@ -23,7 +24,7 @@ namespace Ludiq.Peek
 
 		private static GameObject[] selectionToolbarTargets;
 
-		public static ToolbarControl selectionToolbarControl { get; private set; }
+		private static Dictionary<SceneView, ToolbarControl> selectionToolbarControls { get; } = new Dictionary<SceneView, ToolbarControl>();
 
 		public static ToolbarControl dragToolbarControl { get; private set; }
 
@@ -43,20 +44,58 @@ namespace Ludiq.Peek
 
 		public static void RefreshSelectionToolbar()
 		{
-			// Don't pick prefabs
-			selectionToolbarTargets = Selection.transforms.Select(t => t.gameObject).ToArray();
+			var sceneViews = SceneView.sceneViews.OfType<SceneView>().ToListPooled();
+			var sceneViewsToRemove = HashSetPool<SceneView>.New();
 
-			if (selectionToolbarTargets.Length > 0)
+			try
 			{
-				var toolbar = ObjectToolbarProvider.GetToolbar(selectionToolbarTargets);
-				ShortcutsIntegration.primaryToolbar = selectionToolbarControl = toolbarControlProvider.GetControl(toolbar);
-			}
-			else
-			{
-				ShortcutsIntegration.primaryToolbar = selectionToolbarControl = null;
-			}
+				// Don't pick prefabs
+				selectionToolbarTargets = Selection.transforms.Select(t => t.gameObject).ToArray();
+				
+				if (selectionToolbarTargets.Length > 0)
+				{
+					// Update controls for each open scene view
+					foreach (var sceneView in sceneViews)
+					{
+						var toolbar = ObjectToolbarProvider.GetToolbar(selectionToolbarTargets);
 
-			SceneView.RepaintAll();
+						var toolbarControl = toolbarControlProvider.GetControl(toolbar, sceneView);
+
+						selectionToolbarControls[sceneView] = toolbarControl;
+
+						if (sceneView == SceneView.lastActiveSceneView)
+						{
+							ShortcutsIntegration.primaryToolbar = toolbarControl;
+						}
+					}
+				}
+				else
+				{
+					selectionToolbarControls.Clear();
+					ShortcutsIntegration.primaryToolbar = null;
+				}
+
+				// Remove toolbars for closed scene views
+				foreach (var selectionToolbarControl in selectionToolbarControls)
+				{
+					if (!sceneViews.Contains(selectionToolbarControl.Key))
+					{
+						sceneViewsToRemove.Add(selectionToolbarControl.Key);
+					}
+				}
+
+				foreach (var sceneViewToRemove in sceneViewsToRemove)
+				{
+					selectionToolbarControls.Remove(sceneViewToRemove);
+				}
+
+				SceneView.RepaintAll();
+			}
+			finally
+			{
+				sceneViews.Free();
+				sceneViewsToRemove.Free();
+			}
 		}
 
 		private static void RefreshDragToolbar(SceneView sceneView)
@@ -70,7 +109,7 @@ namespace Ludiq.Peek
 				if (dragToolbarTarget != null)
 				{
 					var dragToolbar = ObjectToolbarProvider.GetToolbar(dragToolbarTarget);
-					dragToolbarControl = toolbarControlProvider.GetControl(dragToolbar);
+					dragToolbarControl = toolbarControlProvider.GetControl(dragToolbar, sceneView);
 					sceneView.Repaint();
 				}
 				else
@@ -115,14 +154,16 @@ namespace Ludiq.Peek
 			}
 
 			Profiler.BeginSample("Peek." + nameof(SceneToolbars));
-			
+
 			try
 			{
 
 				Handles.BeginGUI();
 
+				selectionToolbarControls.TryGetValue(sceneView, out var selectionToolbarControl);
+
 				DrawToolbar(sceneView, selectionToolbarControl, selectionToolbarTargets);
-				
+
 				if (PeekPlugin.Configuration.enableStickyDragAndDrop)
 				{
 					if (dragToolbarControl != null)
@@ -137,7 +178,7 @@ namespace Ludiq.Peek
 
 				if (PeekPlugin.Configuration.selectionHierarchyShortcut.Check(e))
 				{
-					if (OpenHierarchyTool())
+					if (OpenHierarchyTool(selectionToolbarControl))
 					{
 						e.Use();
 					}
@@ -149,8 +190,10 @@ namespace Ludiq.Peek
 			{
 				Debug.LogException(ex);
 			}
-
-			Profiler.EndSample();
+			finally
+			{
+				Profiler.EndSample();
+			}
 		}
 
 		private static void DrawToolbar(SceneView sceneView, ToolbarControl toolbarControl, GameObject[] targets)
@@ -235,7 +278,7 @@ namespace Ludiq.Peek
 			}
 		}
 		
-		private static bool OpenHierarchyTool()
+		private static bool OpenHierarchyTool(ToolbarControl selectionToolbarControl)
 		{
 			var gameObjectTool = selectionToolbarControl?.toolbar.OfType<GameObjectEditorTool>().FirstOrDefault();
 

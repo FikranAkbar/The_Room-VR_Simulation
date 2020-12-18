@@ -27,7 +27,11 @@ namespace Ludiq.Peek
 		{
 			if (Event.current.type == EventType.Repaint && highlight != null)
 			{
+#if PROBUILDER_4_4_OR_NEWER
+				UnityEditorProBuilderDynamic.EditorHandleDrawing.DrawSceneSelection(highlight);
+#else
 				UnityEditorProBuilderDynamic.EditorMeshHandles.DrawSceneSelection(highlight);
+#endif
 			}
 		}
 

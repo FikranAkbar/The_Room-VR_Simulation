@@ -4,6 +4,7 @@
 	{
 		Root,
 		Sibling,
-		SiblingOutsidePrefabs
+		SiblingOutsidePrefabs,
+		Child
 	}
 }

@@ -14,12 +14,28 @@ namespace Ludiq.Peek
 
 		public ITool tool { get; }
 
-		public Rect screenPosition { get; set; }
+		private Rect _screenPosition;
+
+		private Rect _guiPosition;
+
+		public Rect screenPosition
+		{
+			get => _screenPosition;
+			set
+			{
+				_screenPosition = value;
+				_guiPosition = GUIUtility.ScreenToGUIRect(value);
+			}
+		}
 
 		public Rect guiPosition
 		{
-			get => GUIUtility.ScreenToGUIRect(screenPosition);
-			set => screenPosition = LudiqGUIUtility.GUIToScreenRect(value);
+			get => _guiPosition;
+			set
+			{
+				_guiPosition = value;
+				_screenPosition = LudiqGUIUtility.GUIToScreenRect(value);
+			}
 		}
 
 		public EventModifiers shortcutModifiers = EventModifiers.None;
@@ -45,8 +61,21 @@ namespace Ludiq.Peek
 			}
 		}
 
-		public Rect activatorGuiPosition => GUIUtility.ScreenToGUIRect(activatorScreenPosition);
-
+		public Rect activatorGuiPosition
+		{
+			get
+			{
+				if (toolbarControl.isActivator)
+				{
+					return toolbarControl.guiPosition;
+				}
+				else
+				{
+					return guiPosition;
+				}
+			}
+		}
+		
 		private Rect previousScreenPosition;
 
 		private bool isPressed;
@@ -132,6 +161,8 @@ namespace Ludiq.Peek
 					tool.OnDropExited(this);
 					isDropping = false;
 				}
+
+				isPressed = false;
 			}
 
 			if (e.rawType == EventType.MouseUp)
@@ -277,16 +308,10 @@ namespace Ludiq.Peek
 			var icon = showPreview ? tool.preview : tool.icon;
 			var content = new GUIContent(showText ? tool.label : string.Empty, ColorUtility.GetPixel(ColorPalette.transparent));
 			var style = tool.SceneViewStyle(isFirst, isLast);
-			var guiPosition = GUILayoutUtility.GetRect(content, style);
 
-			if (e.type == EventType.Repaint)
+			if (e.type == EventType.Repaint && screenPosition != previousScreenPosition)
 			{
-				this.guiPosition = guiPosition;
-
-				if (screenPosition != previousScreenPosition)
-				{
-					tool.OnMove(this);
-				}
+				tool.OnMove(this);
 			}
 
 			var isHovered = guiPosition.Contains(e.mousePosition);
@@ -391,10 +416,12 @@ namespace Ludiq.Peek
 				};
 			}
 
-			if (e.type != EventType.Layout)
+			if (e.type == EventType.Repaint)
 			{
 				previousScreenPosition = screenPosition;
 			}
+
+			// EditorGUI.DrawRect(guiPosition, Color.red.WithAlpha(0.5f));
 
 			return delayedTooltip;
 		}
