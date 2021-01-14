@@ -24,12 +24,17 @@ public class MoveTo : MonoBehaviour
     private Vector3 initialPos;
     private Vector3 bedPos;
 
+    // sounds
+    public GameObject moveSound;
+
     // booleans property for gazing
     private bool isGazing = false;
 
     // game object to activate
     public List<GameObject> gameObjectsToDeactivate;
     public List<GameObject> gameObjectsToActivate;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -102,6 +107,8 @@ public class MoveTo : MonoBehaviour
             gameObjectsToDeactivate[i].SetActive(false);
         }
 
+        moveSound.SetActive(false);
+        moveSound.SetActive(true);
         isGazing = false;
         gazeTime = 0f;
         redIcon.fillAmount = gazeTime;
