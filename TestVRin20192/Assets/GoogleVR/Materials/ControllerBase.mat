@@ -4,11 +4,12 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: ControllerBase
   m_Shader: {fileID: 4800000, guid: fdbce15836bf64163856f689fdd67b2c, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -22,6 +23,9 @@ Material:
         m_Texture: {fileID: 2800000, guid: 16bedee72525148848c1c905828661fb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _GVRTouchPadRadius: 0.139
+    - _GvrTouchpadCenterX: 0.15
+    - _GvrTouchpadCenterY: 0.85
     m_Colors:
     - _Color: {r: 0.61764705, g: 0.61764705, b: 0.61764705, a: 1}

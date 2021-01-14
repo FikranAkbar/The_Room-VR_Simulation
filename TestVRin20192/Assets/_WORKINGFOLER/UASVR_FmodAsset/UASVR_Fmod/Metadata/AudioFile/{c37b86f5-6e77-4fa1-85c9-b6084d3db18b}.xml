@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c37b86f5-6e77-4fa1-85c9-b6084d3db18b}">
+		<property name="assetPath">
+			<value>Rixton - Me and My Broken Heart (Official Video).mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>195.34367346938777</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{55a3f870-ef85-4181-a5ce-04b4c9db2b59}</destination>
+		</relationship>
+	</object>
+</objects>
