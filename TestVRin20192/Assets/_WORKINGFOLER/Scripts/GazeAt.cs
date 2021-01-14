@@ -24,6 +24,9 @@ public class GazeAt : MonoBehaviour
     public string firstStateName;
     public string secondStateName;
 
+    // sounds
+    public GameObject interactionSound;
+
     // transforms
     public Transform playerVR;
     public float invisibleAfter;
@@ -90,11 +93,15 @@ public class GazeAt : MonoBehaviour
         yield return new WaitUntil(() => redIcon.fillAmount >= 1f);
         if (firstState)
         {
+            interactionSound.SetActive(false);
+            interactionSound.SetActive(true);
             animator.SetTrigger("TriggerSecondState");
             firstState = false;
         } 
         else if (!firstState)
         {
+            interactionSound.SetActive(false);
+            interactionSound.SetActive(true);
             animator.SetTrigger("TriggerFirstState");
             firstState = true;
         }

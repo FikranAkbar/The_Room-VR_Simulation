@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GazeAtTV : MonoBehaviour
+public class GazeAtBook : MonoBehaviour
 {
     // images for icon
     private Image whiteIcon;
     private Image redIcon;
 
-    // coroutine for triggering sound
+    // coroutine for triggering animation
     private Coroutine lastGazingCoroutine;
 
     // times property for gazing
@@ -17,9 +17,16 @@ public class GazeAtTV : MonoBehaviour
     [SerializeField]
     private float clickDuration;
 
+    // animations
+    private int animLayer = 0;
+    public Animator animator;
+    public bool firstState = false;
+    public string firstStateName;
+    public string secondStateName;
+
     // sounds
-    public GameObject tvVideo;
-    public GameObject tvAudio;
+    public GameObject openBookSound;
+    public GameObject closeBookSound;
 
     // transforms
     public Transform playerVR;
@@ -28,15 +35,13 @@ public class GazeAtTV : MonoBehaviour
     // booleans property for gazing
     private bool isGazing = false;
 
-    // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         whiteIcon = transform.GetChild(0).GetComponent<Image>();
         redIcon = transform.GetChild(1).GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (isGazing)
         {
@@ -87,15 +92,32 @@ public class GazeAtTV : MonoBehaviour
     {
         Debug.Log("Start Coroutine");
         yield return new WaitUntil(() => redIcon.fillAmount >= 1f);
-        if (tvVideo.activeSelf)
+        if (firstState)
         {
-            tvVideo.SetActive(false);
-            tvAudio.SetActive(false);
+            openBookSound.SetActive(false);
+            closeBookSound.SetActive(true);
+            animator.SetTrigger("TriggerSecondState");
+            firstState = false;
         }
-        else if (!tvVideo.activeSelf)
+        else if (!firstState)
         {
-            tvVideo.SetActive(true);
-            tvAudio.SetActive(true);
+            openBookSound.SetActive(true);
+            closeBookSound.SetActive(false);
+            animator.SetTrigger("TriggerFirstState");
+            firstState = true;
+        }
+    }
+
+    private bool IsPlaying(Animator anim, string stateName)
+    {
+        if (anim.GetCurrentAnimatorStateInfo(animLayer).IsName(stateName) &&
+            anim.GetCurrentAnimatorStateInfo(animLayer).normalizedTime < 1.0f)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
