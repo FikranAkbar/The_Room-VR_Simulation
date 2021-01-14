@@ -86,13 +86,13 @@ public class GazeAtTV : MonoBehaviour
     {
         Debug.Log("Start Coroutine");
         yield return new WaitUntil(() => redIcon.fillAmount >= 1f);
-        if (!tvVideo.activeSelf)
-        {
-            tvVideo.SetActive(true);
-        }
-        else if (tvVideo.activeSelf)
+        if (tvVideo.activeSelf)
         {
             tvVideo.SetActive(false);
+        }
+        else if (!tvVideo.activeSelf)
+        {
+            tvVideo.SetActive(true);
         }
     }
 }
