@@ -114,6 +114,9 @@
 		<relationship name="effects">
 			<destination>{cb4a4e97-3d09-40d1-b6c0-33a1d248d0dd}</destination>
 			<destination>{418c7a41-3fc7-4bb2-a0a3-4ff77cdcb44b}</destination>
+			<destination>{04bcfcaa-37e7-4418-956c-87aaced7793d}</destination>
+			<destination>{15c8fb93-fbaf-4ee8-8dd2-971f7ed8566b}</destination>
+			<destination>{d2835683-6a65-4c34-ad97-0765bd136186}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{dc6edebd-75d1-475f-a49a-9b0a29f24137}" />
@@ -126,5 +129,26 @@
 	<object class="MixerBusPanner" id="{d5bc2e0e-eb5d-49f2-afef-953151931a2e}" />
 	<object class="MixerBusFader" id="{cb4a4e97-3d09-40d1-b6c0-33a1d248d0dd}" />
 	<object class="SpatialiserEffect" id="{418c7a41-3fc7-4bb2-a0a3-4ff77cdcb44b}" />
+	<object class="MultibandEqEffect" id="{04bcfcaa-37e7-4418-956c-87aaced7793d}">
+		<property name="frequencyA">
+			<value>1830.78857</value>
+		</property>
+		<property name="qualityA">
+			<value>3.24137926</value>
+		</property>
+	</object>
+	<object class="DistortionEffect" id="{15c8fb93-fbaf-4ee8-8dd2-971f7ed8566b}">
+		<property name="level">
+			<value>0.620000005</value>
+		</property>
+	</object>
+	<object class="HighpassEffect" id="{d2835683-6a65-4c34-ad97-0765bd136186}">
+		<property name="cutoff">
+			<value>740</value>
+		</property>
+		<property name="resonance">
+			<value>2.95000005</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{52e242dc-d465-4726-b5ac-e99a9928300f}" />
 </objects>

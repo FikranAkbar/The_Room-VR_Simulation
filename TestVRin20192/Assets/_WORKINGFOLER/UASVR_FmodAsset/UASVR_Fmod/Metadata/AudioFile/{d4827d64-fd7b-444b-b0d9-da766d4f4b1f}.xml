@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{d4827d64-fd7b-444b-b0d9-da766d4f4b1f}">
+		<property name="assetPath">
+			<value>zapsplat_technology_radio_static_buzz_hum_002_57714.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>10.199999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{55a3f870-ef85-4181-a5ce-04b4c9db2b59}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -23,7 +23,7 @@
 			<destination>{478b7901-22af-44d9-88fa-806d6762676a}</destination>
 		</relationship>
 		<relationship name="markerTracks">
-			<destination>{b9425fa0-de60-40fb-aeee-691e906983a8}</destination>
+			<destination>{ff7a663e-c0b5-4fc2-9a97-f61ac302e8ff}</destination>
 		</relationship>
 		<relationship name="groupTracks">
 			<destination>{129ae0e6-30c4-4eec-be75-528be8586bba}</destination>
@@ -57,7 +57,7 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{478b7901-22af-44d9-88fa-806d6762676a}" />
-	<object class="MarkerTrack" id="{b9425fa0-de60-40fb-aeee-691e906983a8}" />
+	<object class="MarkerTrack" id="{ff7a663e-c0b5-4fc2-9a97-f61ac302e8ff}" />
 	<object class="GroupTrack" id="{129ae0e6-30c4-4eec-be75-528be8586bba}">
 		<relationship name="modules">
 			<destination>{a2d2b4c1-7da8-45ca-b65c-1522133dfe25}</destination>
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{a43714cf-e5ef-45c7-9a87-8dffa0e86f23}">
+		<property name="volume">
+			<value>-10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{86fd7029-6839-4e50-8bfa-2932c70277b9}</destination>
 		</relationship>
@@ -112,6 +115,9 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{86fd7029-6839-4e50-8bfa-2932c70277b9}">
 		<relationship name="effects">
+			<destination>{d960b5cf-4df0-4b25-9a8a-506d29fe3c42}</destination>
+			<destination>{32bc8d38-c46c-44e5-ab23-8cdada6225e1}</destination>
+			<destination>{89286067-3ab8-4ec7-bef5-d5c2d8031590}</destination>
 			<destination>{b0e08b7e-6913-4e4b-ac05-6b28a0d48575}</destination>
 			<destination>{7c554072-1c8b-42c5-af17-33b312442dfd}</destination>
 		</relationship>
@@ -124,6 +130,27 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7e30586d-13db-422c-bb9a-f4d7c6f71572}" />
+	<object class="MultibandEqEffect" id="{d960b5cf-4df0-4b25-9a8a-506d29fe3c42}">
+		<property name="frequencyA">
+			<value>1830.78857</value>
+		</property>
+		<property name="qualityA">
+			<value>3.24137926</value>
+		</property>
+	</object>
+	<object class="DistortionEffect" id="{32bc8d38-c46c-44e5-ab23-8cdada6225e1}">
+		<property name="level">
+			<value>0.620000005</value>
+		</property>
+	</object>
+	<object class="HighpassEffect" id="{89286067-3ab8-4ec7-bef5-d5c2d8031590}">
+		<property name="cutoff">
+			<value>740</value>
+		</property>
+		<property name="resonance">
+			<value>2.95000005</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{b0e08b7e-6913-4e4b-ac05-6b28a0d48575}" />
 	<object class="SpatialiserEffect" id="{7c554072-1c8b-42c5-af17-33b312442dfd}" />
 	<object class="MixerBusFader" id="{4b7648bb-eb4b-48d8-b38c-987482211269}" />

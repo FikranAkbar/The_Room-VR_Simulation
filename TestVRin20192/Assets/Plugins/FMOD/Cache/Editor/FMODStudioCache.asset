@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8885009604163173809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Impact Gaze
+  m_EditorClassIdentifier: 
+  Path: event:/Impact Gaze
+  guid: 9908314994439943ba00c5d5a307c5aa
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 280
+--- !u!114 &-8705992191546110194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TV Sound/Yorushika Rain on Cappucino
+  m_EditorClassIdentifier: 
+  Path: event:/TV Sound/Yorushika Rain on Cappucino
+  guid: 039ffa9e34229f4ca6f4a54541f17a5f
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 269688
 --- !u!114 &-8574028834752926512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,10 +59,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637426968238209387
+  lastModified: 637462147482867984
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8400549649037336890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Kursi Geser
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Kursi Geser
+  guid: aad06f459291c84c98d0c5cc99ca27ff
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-8281124446385775387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +108,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 333368
+--- !u!114 &-7237328205880794975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Pulpen Jatoh
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Pulpen Jatoh
+  guid: ef2096b6e9617948b6ae49b75d7370d6
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &-6964973984980246748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +151,96 @@ MonoBehaviour:
   - Name: Desktop
     Value: 748
   Exists: 1
+--- !u!114 &-6459027308824951165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Suara Hujan
+  m_EditorClassIdentifier: 
+  Path: event:/Suara Hujan
+  guid: 52a37d7a92a5aa4e9e79d97639896cea
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30030
+--- !u!114 &-6257788999050709637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/RadioBeez
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/RadioBeez
+  guid: 76ea08fe0b69bd4ca12de6f643b22f24
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10200
+--- !u!114 &-4457274010080428640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Kursi Geser
+  m_EditorClassIdentifier: 
+  Path: event:/Kursi Geser
+  guid: aad06f459291c84c98d0c5cc99ca27ff
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &-3033807579800117448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/RadioEvent (3)
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/RadioEvent (3)
+  guid: 6f3a06c4e4af63488ee5412a0cf05875
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 195343
 --- !u!114 &-2824746517066833280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,12 +255,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637426968238299426
+  lastModified: 637462147482948005
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 742
+    Value: 1388
   Exists: 1
+--- !u!114 &-1306787959682180448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Gedor Pintu
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Gedor Pintu
+  guid: f6fef5ea8164804988f1328d4c088aff
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2492
 --- !u!114 &-1141392310867231659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +304,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2432
   Exists: 1
+--- !u!114 &-235524829235664796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/tutup Buku
+  m_EditorClassIdentifier: 
+  Path: event:/tutup Buku
+  guid: f4f21aefb6234243a5b31ee898343080
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1038
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,14 +342,50 @@ MonoBehaviour:
   - {fileID: -2824746517066833280}
   - {fileID: -8574028834752926512}
   EditorEvents:
-  - {fileID: 7337126677288891207}
+  - {fileID: 8456809529557421045}
+  - {fileID: 1583505199405893920}
+  - {fileID: 4597269400169372043}
+  - {fileID: 5214514098548115793}
+  - {fileID: -3033807579800117448}
+  - {fileID: 7927620497355827303}
+  - {fileID: 8644822589692833017}
+  - {fileID: 8368896823555975091}
+  - {fileID: -8400549649037336890}
+  - {fileID: -7237328205880794975}
+  - {fileID: 6571786667460286708}
+  - {fileID: -1306787959682180448}
+  - {fileID: -6257788999050709637}
+  - {fileID: -8705992191546110194}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8574028834752926512}
   StringsBanks:
   - {fileID: -2824746517066833280}
-  stringsBankWriteTime: 637426968238299426
+  stringsBankWriteTime: 637462147482948005
   cacheVersion: 5
+--- !u!114 &1583505199405893920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Nyalain Lampu
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Nyalain Lampu
+  guid: 3fac472fce2eda48a5f70de183d11faa
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40
 --- !u!114 &2564903018197893236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +406,141 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2432
   Exists: 1
+--- !u!114 &4597269400169372043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/RadioEvent (2)
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/RadioEvent (2)
+  guid: 4b6dd5c8da76354e9517f7b0ac607e14
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 227996
+--- !u!114 &5214514098548115793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Suara Hujan
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Suara Hujan
+  guid: 52a37d7a92a5aa4e9e79d97639896cea
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30030
+--- !u!114 &6036350903986707269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/tutup Jendela
+  m_EditorClassIdentifier: 
+  Path: event:/tutup Jendela
+  guid: 9420bd9a3712254b8e534c21dea62885
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1600
+--- !u!114 &6571786667460286708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Tutup Buku
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Tutup Buku
+  guid: f4f21aefb6234243a5b31ee898343080
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1038
+--- !u!114 &7076679432399207852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Pulpen Jatoh
+  m_EditorClassIdentifier: 
+  Path: event:/Pulpen Jatoh
+  guid: ef2096b6e9617948b6ae49b75d7370d6
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &7090746492677420981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Nyalain Lampu
+  m_EditorClassIdentifier: 
+  Path: event:/Nyalain Lampu
+  guid: 3fac472fce2eda48a5f70de183d11faa
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40
 --- !u!114 &7337126677288891207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +555,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/test
   guid: 3e311bacbec75847b15c43d80084dbc7
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 36034
+--- !u!114 &7533630519944005757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Gedor Pintu
+  m_EditorClassIdentifier: 
+  Path: event:/Gedor Pintu
+  guid: f6fef5ea8164804988f1328d4c088aff
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2492
+--- !u!114 &7927620497355827303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Tutup Jendela
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Tutup Jendela
+  guid: 9420bd9a3712254b8e534c21dea62885
   Banks:
   - {fileID: -8574028834752926512}
   IsStream: 1
@@ -166,7 +607,98 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 333368
+  Length: 1600
+--- !u!114 &8212111405166913067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Buka Jendela
+  m_EditorClassIdentifier: 
+  Path: event:/Buka Jendela
+  guid: 2b8238ec0bc6654da5825ea85a7dab17
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2540
+--- !u!114 &8368896823555975091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/RadioEvent (1)
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/RadioEvent (1)
+  guid: 998ae565196072469da62941696e73b1
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 195239
+--- !u!114 &8456809529557421045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Buka Jendela
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Buka Jendela
+  guid: 2b8238ec0bc6654da5825ea85a7dab17
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2540
+--- !u!114 &8644822589692833017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Impact Gaze
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Impact Gaze
+  guid: 9908314994439943ba00c5d5a307c5aa
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 280
 --- !u!114 &8874682712019620656
 MonoBehaviour:
   m_ObjectHideFlags: 0
