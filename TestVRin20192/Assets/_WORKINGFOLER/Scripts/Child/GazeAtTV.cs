@@ -19,7 +19,7 @@ public class GazeAtTV : MonoBehaviour
 
     // sounds
     public GameObject tvVideo;
-    public GameObject tvAudio;
+    //public GameObject tvAudio;
 
     // transforms
     public Transform playerVR;
@@ -90,12 +90,12 @@ public class GazeAtTV : MonoBehaviour
         if (tvVideo.activeSelf)
         {
             tvVideo.SetActive(false);
-            tvAudio.SetActive(false);
+            //tvAudio.SetActive(false);
         }
         else if (!tvVideo.activeSelf)
         {
             tvVideo.SetActive(true);
-            tvAudio.SetActive(true);
+            //tvAudio.SetActive(true);
         }
     }
 }

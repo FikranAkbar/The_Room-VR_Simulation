@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637462147482867984
+  lastModified: 637462287064026112
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -255,11 +255,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637462147482948005
+  lastModified: 637462287064106099
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1388
+    Value: 1474
   Exists: 1
 --- !u!114 &-1306787959682180448
 MonoBehaviour:
@@ -356,12 +356,14 @@ MonoBehaviour:
   - {fileID: -1306787959682180448}
   - {fileID: -6257788999050709637}
   - {fileID: -8705992191546110194}
+  - {fileID: 7525281923757396316}
+  - {fileID: 6135243734566016885}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8574028834752926512}
   StringsBanks:
   - {fileID: -2824746517066833280}
-  stringsBankWriteTime: 637462147482948005
+  stringsBankWriteTime: 637462287064106099
   cacheVersion: 5
 --- !u!114 &1583505199405893920
 MonoBehaviour:
@@ -474,6 +476,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1600
+--- !u!114 &6135243734566016885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Buka Buku
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Buka Buku
+  guid: bdc75bc4681c99479860a1ac492e0973
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 720
 --- !u!114 &6571786667460286708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +588,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 36034
+--- !u!114 &7525281923757396316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction Sounds/Lamp Buzz
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction Sounds/Lamp Buzz
+  guid: 10f6b031533fb046a4041a44ea352dcf
+  Banks:
+  - {fileID: -8574028834752926512}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1160
 --- !u!114 &7533630519944005757
 MonoBehaviour:
   m_ObjectHideFlags: 0

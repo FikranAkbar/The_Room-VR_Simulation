@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{37cfcc9e-ff69-42af-8a1e-8957a9ee15f6}">
+		<property name="volume">
+			<value>-11</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{688ddcad-3720-4454-8f8f-f6550ee79e74}</destination>
 		</relationship>
@@ -97,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d70a0923-4ebb-4042-8dff-90a1808957f4}">
+		<property name="volume">
+			<value>-10</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -112,11 +118,11 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{688ddcad-3720-4454-8f8f-f6550ee79e74}">
 		<relationship name="effects">
+			<destination>{a24118d4-d37c-4736-bcdf-5688a8918388}</destination>
+			<destination>{07b19496-476f-47fa-99b1-a3f8959f2f12}</destination>
+			<destination>{e0533b85-8d86-4519-8654-9f0744ae5803}</destination>
 			<destination>{d3637732-10b8-4877-b0e5-195deacb6f7b}</destination>
 			<destination>{348fda85-7773-460a-aad3-66c63c1e90ac}</destination>
-			<destination>{d75e3a08-818c-483d-b83b-aa4dc632da97}</destination>
-			<destination>{d010cc0d-7aa8-4c8f-b38b-cb2299c3378b}</destination>
-			<destination>{91654492-08a4-43a1-bf4f-e5c69e7805c9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{788094d5-2b5f-4bb9-b615-df7f20d30f7f}" />
@@ -127,28 +133,28 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2b2b3c95-a941-4280-b6b4-2c28a97a9487}" />
-	<object class="MixerBusFader" id="{d3637732-10b8-4877-b0e5-195deacb6f7b}" />
-	<object class="SpatialiserEffect" id="{348fda85-7773-460a-aad3-66c63c1e90ac}" />
-	<object class="MultibandEqEffect" id="{d75e3a08-818c-483d-b83b-aa4dc632da97}">
+	<object class="MultibandEqEffect" id="{a24118d4-d37c-4736-bcdf-5688a8918388}">
 		<property name="frequencyA">
-			<value>1830.78857</value>
+			<value>3137.55566</value>
 		</property>
 		<property name="qualityA">
-			<value>3.24137926</value>
+			<value>4.37931061</value>
 		</property>
 	</object>
-	<object class="DistortionEffect" id="{d010cc0d-7aa8-4c8f-b38b-cb2299c3378b}">
+	<object class="DistortionEffect" id="{07b19496-476f-47fa-99b1-a3f8959f2f12}">
 		<property name="level">
-			<value>0.620000005</value>
+			<value>0.564999998</value>
 		</property>
 	</object>
-	<object class="HighpassEffect" id="{91654492-08a4-43a1-bf4f-e5c69e7805c9}">
+	<object class="HighpassEffect" id="{e0533b85-8d86-4519-8654-9f0744ae5803}">
 		<property name="cutoff">
-			<value>740</value>
+			<value>850</value>
 		</property>
 		<property name="resonance">
-			<value>2.95000005</value>
+			<value>7.20000029</value>
 		</property>
 	</object>
+	<object class="MixerBusFader" id="{d3637732-10b8-4877-b0e5-195deacb6f7b}" />
+	<object class="SpatialiserEffect" id="{348fda85-7773-460a-aad3-66c63c1e90ac}" />
 	<object class="MixerBusFader" id="{15c588c0-6941-406b-9daa-b7e7964ab1ef}" />
 </objects>

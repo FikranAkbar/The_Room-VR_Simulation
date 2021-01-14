@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GazeAtWindow : MonoBehaviour
-{
+{ 
     // images for icon
     private Image whiteIcon;
     private Image redIcon;
@@ -27,6 +27,11 @@ public class GazeAtWindow : MonoBehaviour
     // sounds
     public GameObject openWindowSound;
     public GameObject closeWindowSound;
+    public GameObject rainGO;
+    public float fadeSoundDuration;
+    private float fadeProgressDuration;
+    public float rainSoundWhenOpen;
+    public FMODUnity.StudioEventEmitter rainSound;
 
     // transforms
     public Transform playerVR;
@@ -39,6 +44,7 @@ public class GazeAtWindow : MonoBehaviour
     {
         whiteIcon = transform.GetChild(0).GetComponent<Image>();
         redIcon = transform.GetChild(1).GetComponent<Image>();
+        rainSound = rainGO.GetComponent<FMODUnity.StudioEventEmitter>();
     }
 
     private void Update()
@@ -69,6 +75,8 @@ public class GazeAtWindow : MonoBehaviour
             whiteIcon.enabled = true;
             redIcon.enabled = true;
         }
+
+        print(fadeProgressDuration);
     }
 
     public void StartGazing()
@@ -98,6 +106,7 @@ public class GazeAtWindow : MonoBehaviour
             closeWindowSound.SetActive(true);
             animator.SetTrigger("TriggerSecondState");
             firstState = false;
+            StartCoroutine(DecreaseRainSoundVolume());
         }
         else if (!firstState)
         {
@@ -105,6 +114,7 @@ public class GazeAtWindow : MonoBehaviour
             closeWindowSound.SetActive(false);
             animator.SetTrigger("TriggerFirstState");
             firstState = true;
+            StartCoroutine(IncreaseRainSoundVolume());
         }
     }
 
@@ -118,6 +128,28 @@ public class GazeAtWindow : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    private IEnumerator IncreaseRainSoundVolume()
+    {
+        fadeProgressDuration = 0;
+        for(float i = 0; i <= 10; i++)
+        {
+            rainSound.EventInstance.setVolume(rainSoundWhenOpen * (i / 10f));
+            yield return new WaitForSeconds(0.03f);
+            print(i / 10f);
+        }
+    }
+
+    private IEnumerator DecreaseRainSoundVolume()
+    {
+        fadeProgressDuration = fadeSoundDuration;
+        for (float i = 10; i > 0; i--)
+        {
+            rainSound.EventInstance.setVolume(rainSoundWhenOpen * (i / 10f));
+            yield return new WaitForSeconds(0.03f);
+            print(i / 10f);
         }
     }
 }

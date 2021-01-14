@@ -21,6 +21,8 @@ public class GazeAtRadio : MonoBehaviour
     public List<GameObject> studioEventsEmitter;
     private int randomNum;
     private GameObject eventPlaying;
+    public GameObject onRadioSound;
+    public GameObject offRadioSound;
 
     // transforms
     public Transform playerVR;
@@ -94,11 +96,15 @@ public class GazeAtRadio : MonoBehaviour
             randomNum = Random.Range(0, studioEventsEmitter.Count);
             eventPlaying = studioEventsEmitter[randomNum];
             eventPlaying.SetActive(true);
+            onRadioSound.SetActive(true);
+            offRadioSound.SetActive(false);
         }
         else if (eventPlaying != null)
         {
             eventPlaying.SetActive(false);
             eventPlaying = null;
+            onRadioSound.SetActive(false);
+            offRadioSound.SetActive(true);
         }
     }
 }
