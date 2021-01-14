@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637462318452910573
+  lastModified: 637462509216951575
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -236,7 +236,7 @@ MonoBehaviour:
   - {fileID: -8574028834752926512}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_WORKINGFOLER/UASVR_FmodAsset/UASVR_Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637462318453010579
+  lastModified: 637462509217031586
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -363,7 +363,7 @@ MonoBehaviour:
   - {fileID: -8574028834752926512}
   StringsBanks:
   - {fileID: -2824746517066833280}
-  stringsBankWriteTime: 637462318453010579
+  stringsBankWriteTime: 637462509217031586
   cacheVersion: 5
 --- !u!114 &1583505199405893920
 MonoBehaviour:
@@ -426,7 +426,7 @@ MonoBehaviour:
   - {fileID: -8574028834752926512}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -521,7 +521,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1038
+  Length: 1250
 --- !u!114 &7076679432399207852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
   - {fileID: -8574028834752926512}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

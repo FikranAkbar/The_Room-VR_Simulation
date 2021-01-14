@@ -19,11 +19,14 @@ public class GazeAtTV : MonoBehaviour
 
     // sounds
     public GameObject tvVideo;
-    //public GameObject tvAudio;
+    public GameObject tvAudio;
 
     // transforms
     public Transform playerVR;
     public float invisibleAfter;
+
+    // render texture
+    public RenderTexture renderTexture;
 
     // booleans property for gazing
     private bool isGazing = false;
@@ -89,13 +92,15 @@ public class GazeAtTV : MonoBehaviour
         yield return new WaitUntil(() => redIcon.fillAmount >= 1f);
         if (tvVideo.activeSelf)
         {
+            renderTexture.Release();
             tvVideo.SetActive(false);
-            //tvAudio.SetActive(false);
+            tvAudio.SetActive(false);
         }
         else if (!tvVideo.activeSelf)
         {
+            renderTexture.Release();
+            tvAudio.SetActive(true);
             tvVideo.SetActive(true);
-            //tvAudio.SetActive(true);
         }
     }
 }
