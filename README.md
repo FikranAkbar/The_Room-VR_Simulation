@@ -1,7 +1,13 @@
 <!-- ABOUT THE PROJECT -->
-## The_Room-VR_Simulation
+<h1 align="center">The Room - VR Simulation</h1></br>
 
+<h5 align="center">
+Repository For The Room - VR Simulation
+</h5>
+
+<p align="center">
 Game Project for Final Exam in 6th Semesters Amikom Yogyakarta University. The Room VR Simulation is a virtual reality game in which we as students are in a room and interact with the action that is around it.
+</p>
 
 ## Built with
 
