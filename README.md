@@ -7,7 +7,7 @@ Game Project for Final Exam in 6th Semesters Amikom Yogyakarta University. The R
 
 - [Unity](https://unity.com/)
 - [FMOD](https://www.fmod.com/)
-- [Google VR] (https://developers.google.com/vr/develop/unity/get-started-android)
+- [Google_VR](https://developers.google.com/vr/develop/unity/get-started-android)
 
 ### Demo
 
