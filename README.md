@@ -20,11 +20,12 @@ Game Project for Final Exam in 6th Semesters Amikom Yogyakarta University. The R
 <p align="center">
   <img src="(1).png" />
 </p>
-
-
-<img src="(1).png"  height="1080" />
-<img src="(2).png"  height="1080" />
-<img src="(3).png"  height="1080" />
+<p align="center">
+  <img src="(2).png" />
+</p>
+<p align="center">
+  <img src="(3).png" />
+</p>
 
 ## Getting Started
 
